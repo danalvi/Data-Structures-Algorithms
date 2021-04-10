@@ -330,18 +330,12 @@ int main(int argc, char **argv)
 
 	struct rbtreenode *z1  = create(NULL, NULL, NULL, (uintptr_t)(&cz2), false);
 	struct rbtreenode *z2  = create(NULL, NULL, NULL, (uintptr_t)(&cz3), false);
-	printf("\n");
-	show(&root);
 	rb_insert(root,z1, nilT);
-	printf("\n");
-	show(&root);
+
 	rb_insert(root,z2, nilT);
-	printf("\n");
-	show(&root);
 	printf("\n");
 	struct rbtreenode *y = rb_delete(root, z1, nilT);
 	show(&root);
-	printf("\n");
 
 	//root->left->left = create(NULL, NULL, root->left->left, 2, false);
 	//printf("\nHello %p\n", z->parent->parent->parent->parent->parent->parent);
